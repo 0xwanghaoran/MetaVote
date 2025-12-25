@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-display: 'Fraunces', serif;
+  --color-ink: #1b1a17;
+  --color-ink-muted: #5a4b3e;
+  --color-sand: #f8efe4;
+  --color-cream: #fff8f0;
+  --color-peach: #f7b087;
+  --color-coral: #ef7d57;
+  --color-fern: #2f6f4e;
+  --color-sky: #c8d6f4;
+  --color-stone: #e3d6c9;
+  --shadow-soft: 0 18px 40px rgba(32, 23, 14, 0.12);
+  --shadow-card: 0 26px 70px rgba(32, 23, 14, 0.18);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  background: radial-gradient(circle at 12% 18%, rgba(247, 176, 135, 0.4), transparent 55%),
+    radial-gradient(circle at 88% 12%, rgba(200, 214, 244, 0.55), transparent 52%),
+    linear-gradient(150deg, #fdf4e6 0%, #f4ebe2 45%, #f2efe9 100%);
+  color: var(--color-ink);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: repeating-linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.35) 2px,
+    rgba(255, 255, 255, 0) 2px,
+    rgba(255, 255, 255, 0) 6px
+  );
+  opacity: 0.18;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-display);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(90, 75, 62, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.8rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--color-ink);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(239, 125, 87, 0.35);
+  border-color: rgba(239, 125, 87, 0.5);
+}
